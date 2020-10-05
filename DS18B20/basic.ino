@@ -25,6 +25,9 @@ void loop(void)
 
   //print the temperature in Celsius
   Serial.print("Temperature: ");
+  // function reads and returns temperature reading from the sensor.
+  // index is the location of the sensor on the bus. 
+  // If you are using only one DS18B20 on the bus, set it to 0.
   Serial.print(sensors.getTempCByIndex(0));
   Serial.print((char)176);//shows degrees character
   Serial.print("C  |  ");
